@@ -8,11 +8,11 @@ group            = group_info
 
 android {
     namespace 'org.whispersystems.libsignal'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         minSdk 21
-        targetSdk 34
+        targetSdk 35
     }
 
     compileOptions {
@@ -39,7 +39,7 @@ repositories {
 }
 
 dependencies {
-    implementation "org.whispersystems:curve25519-android:${curve25519_version}"
+    implementation project(':curve25519-android')
     api (project(':java')) {
         exclude group: 'org.whispersystems', module: 'curve25519-java'
     }
